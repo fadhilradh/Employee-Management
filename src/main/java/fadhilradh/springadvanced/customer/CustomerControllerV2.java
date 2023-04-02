@@ -26,12 +26,12 @@ public class CustomerControllerV2 {
     }
 
     @GetMapping(path = "{customerId}")
-    Optional<Customer> getCustomerById(@PathVariable("customerId") int id) {
+    ResponseEntity<Optional<Customer>> getCustomerById(@PathVariable("customerId") int id) {
        return customerService.getCustomerById(id);
     }
 
     @PostMapping
-    void postNewCustomer(@Valid @RequestBody  Customer customerRequest) {
-        customerService.postCustomer(customerRequest);
+    ResponseEntity<Customer> postNewCustomer(@Valid @RequestBody  Customer customerRequest) {
+       return customerService.postCustomer(customerRequest);
     }
 }
