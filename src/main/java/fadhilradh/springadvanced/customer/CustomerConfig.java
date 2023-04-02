@@ -17,11 +17,11 @@ public class CustomerConfig {
         };
     }
 
-    @Bean
-    CustomerRepo customerRepo() {
-        System.out.println("useFakeCustRepo : " + useFakeCustomerRepo);
-        return useFakeCustomerRepo
-                ? new CustomerFakeRepository()
-                : new CustomerRepository();
-    }
+//    @Bean
+//    CustomerRepo customerRepo() {
+//        System.out.println("useFakeCustRepo : " + useFakeCustomerRepo);
+//        return useFakeCustomerRepo
+//                ? new CustomerFakeRepository()
+//                : new CustomerRepository();
+//    }
 }
