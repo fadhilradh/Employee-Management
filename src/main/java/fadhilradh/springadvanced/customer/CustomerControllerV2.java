@@ -1,5 +1,6 @@
 package fadhilradh.springadvanced.customer;
 
+import fadhilradh.springadvanced.exception.ApiReqException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,11 @@ public class CustomerControllerV2 {
     @GetMapping
     List<Customer> getCustomer() {
         return customerService.getCustomers();
+    }
+
+    @GetMapping("exception")
+    List<Customer> getCustomerException() {
+        throw new ApiReqException("Api req exception for customer");
     }
 
     @GetMapping(path = "{customerId}")

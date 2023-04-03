@@ -16,12 +16,10 @@ public class CustomerConfig {
             System.out.println("command liner here world");
         };
     }
-
+//
 //    @Bean
 //    CustomerRepo customerRepo() {
 //        System.out.println("useFakeCustRepo : " + useFakeCustomerRepo);
-//        return useFakeCustomerRepo
-//                ? new CustomerFakeRepository()
-//                : new CustomerRepository();
+//                return new CustomerFakeRepository();
 //    }
 }
