@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @Entity
 public class Customer {
+    public interface PostValidation {}
+    public interface PutValidation {}
+
     @Id
     @SequenceGenerator(
             name = "customer_id_sequence",
@@ -19,14 +22,17 @@ public class Customer {
             strategy = GenerationType.SEQUENCE,
             generator = "customer_id_sequence"
     )
+
     private int id;
-    @NotBlank(message = "name must not be empty")
+    @NotBlank(message = "name must not be empty", groups = PostValidation.class)
     private String name;
-    @NotBlank(message = "password must not be empty")
+
+    @NotBlank(message = "password must not be empty", groups = PostValidation.class)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
-    @NotBlank(message = "email must not be empty")
-    @Email(message = "email must be valid")
+
+    @NotBlank(message = "email must not be empty", groups = PostValidation.class)
+    @Email(message = "email must be valid", groups = {PutValidation.class, PostValidation.class})
     private String email;
 
     public Customer(int id, String name, String password, String email) {
