@@ -4,6 +4,8 @@ spring:
 #    url: jdbc:h2:mem:testdb
     username: skygazer
     password: hamdalah
+  main:
+    banner-mode: OFF
 #    driver-class-name: org.h2.Driver
   jpa:
 #    database-platform: org.hibernate.dialect.H2Dialect
@@ -25,5 +27,17 @@ server:
     include-message: ALWAYS
     include-binding-errors: ALWAYS
 
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+          - prometheus
 
-
+info:
+  app-name: Spring MasterClass

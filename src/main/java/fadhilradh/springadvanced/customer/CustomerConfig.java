@@ -10,10 +10,13 @@ public class CustomerConfig {
     @Value("#{new Boolean('${app.useFakeCustomerRepo:false}')}")
     private Boolean useFakeCustomerRepo;
 
+    @Value("${info.app-name}")
+    private String appName;
+
     @Bean
     CommandLineRunner commandLineRunner() {
         return args -> {
-            System.out.println("command liner here world");
+            System.out.println(appName);
         };
     }
 //
