@@ -5,9 +5,9 @@ Spring Boot - Maven project boilerplate Structured with N-Tier Architecture
 Features : 
 
 - [x] JPA
-- [x] PostgreSQL config
+- [x] PostgreSQL Docker compose & config (yml)
 - [x] Lombok
-- [x] Actuator
-- [x] OpenFeign
-- [x] Testing example
+- [x] Spring Actuator
+- [x] Spring OpenFeign
+- [x] Testing
 
