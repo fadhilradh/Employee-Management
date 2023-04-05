@@ -2,7 +2,7 @@
 
 Spring Boot project boilerplate Structured with N-Tier Architecture 
 
-Featured : 
+Features : 
 
 [x] JPA
 [x] PostgreSQL config
