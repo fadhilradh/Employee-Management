@@ -1,9 +1,9 @@
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5332/customer
-    username: skygazer
-    password: hamdalah
+    url: jdbc:postgresql://localhost:5332
+    username: 
+    password: 
   main:
     banner-mode: OFF
   jpa:
@@ -35,4 +35,4 @@ management:
           - prometheus
 
 info:
-  app-name: Spring MasterClass
+  app-name: Sumatra
