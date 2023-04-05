@@ -10,4 +10,5 @@ Features :
 - [x] Spring Actuator
 - [x] Spring OpenFeign
 - [x] Testing
+- [X] H2 Database for staging environment
 
