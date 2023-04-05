@@ -31,7 +31,7 @@ public class CustomerService {
             LOGGER.error("customer with id : {} not found", id);
             throw new NotFoundException("Customer with id :" + id + " not found");
         }
-        return ResponseEntity.status(HttpStatus.FOUND).body(customer);
+        return ResponseEntity.status(HttpStatus.OK).body(customer);
     }
 
     ResponseEntity<Customer> postCustomer(Customer customerRequest) {

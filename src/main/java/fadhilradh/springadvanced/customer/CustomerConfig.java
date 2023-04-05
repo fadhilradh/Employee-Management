@@ -7,22 +7,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class CustomerConfig {
-    @Value("#{new Boolean('${app.useFakeCustomerRepo:false}')}")
-    private Boolean useFakeCustomerRepo;
-
-    @Value("${info.app-name}")
-    private String appName;
-
-    @Bean
-    CommandLineRunner commandLineRunner() {
-        return args -> {
-            System.out.println(appName);
-        };
-    }
+//    @Value("${info.app-name}")
+//    private String appName;
 //
 //    @Bean
-//    CustomerRepo customerRepo() {
-//        System.out.println("useFakeCustRepo : " + useFakeCustomerRepo);
-//                return new CustomerFakeRepository();
+//    CommandLineRunner commandLineRunner() {
+//        return args -> {
+//            System.out.println(appName);
+//        };
 //    }
 }
