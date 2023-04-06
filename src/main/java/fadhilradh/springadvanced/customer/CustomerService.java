@@ -1,6 +1,7 @@
 package fadhilradh.springadvanced.customer;
 
 import fadhilradh.springadvanced.exception.NotFoundException;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +13,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
+@Slf4j
 public class CustomerService {
     private final CustomerRepository customerRepository;
-    private final static Logger LOGGER = LoggerFactory.getLogger(CustomerService.class);
 
     @Autowired
     public CustomerService(CustomerRepository customerRepository) {
@@ -28,7 +29,7 @@ public class CustomerService {
     ResponseEntity<Optional<Customer>> getCustomerById(int id) {
         Optional<Customer> customer = customerRepository.findById(id);
         if (customer.isEmpty()) {
-            LOGGER.error("customer with id : {} not found", id);
+            log.error("customer with id : {} not found", id);
             throw new NotFoundException("Customer with id :" + id + " not found");
         }
         return ResponseEntity.status(HttpStatus.OK).body(customer);

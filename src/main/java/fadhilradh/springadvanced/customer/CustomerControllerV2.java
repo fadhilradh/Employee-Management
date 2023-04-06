@@ -21,9 +21,6 @@ public class CustomerControllerV2 {
         this.customerService = customerService;
     }
 
-    record CustomerRequest(int id, String name, String password, String email) {
-    }
-
     @GetMapping
     List<Customer> getCustomer() {
         return customerService.getCustomers();
