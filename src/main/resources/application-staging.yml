@@ -3,8 +3,8 @@ spring:
     banner-mode: OFF
   datasource:
     url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
-    username: skygazer
-    password: hamdalah
+    username: 
+    password: 
     driver-class-name: org.h2.Driver
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
@@ -36,4 +36,4 @@ management:
           - prometheus
 
 info:
-  app-name: Spring MasterClass
+  app-name: Sumatra
