@@ -1,5 +1,5 @@
 info:
-    app-name: Sumatra
+    app-name:  Employee Management
 management:
     endpoint:
         health:
@@ -27,7 +27,7 @@ spring:
     jpa:
         database-platform: org.hibernate.dialect.H2Dialect
         hibernate:
-            ddl-auto: update
+            ddl-auto: create-drop
         show-sql: true
     main:
         banner-mode: false

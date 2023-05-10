@@ -1,4 +1,4 @@
-package fadhilradh.springadvanced.exception;
+package fadhilakhmad.employeemanagement.exception;
 
 public class ApiReqException extends RuntimeException{
     public ApiReqException(String message) {

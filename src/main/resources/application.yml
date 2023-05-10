@@ -1,5 +1,5 @@
 info:
-    app-name: Spring MasterClass
+    app-name: Employee Management
 management:
     endpoint:
         health:
@@ -17,7 +17,7 @@ server:
 
 spring:
     datasource:
-        url: jdbc:postgresql://localhost:5332/customer
+        url: jdbc:postgresql://localhost:5332/employee_management
         username: skygazer
         password: hamdalah
     jpa:

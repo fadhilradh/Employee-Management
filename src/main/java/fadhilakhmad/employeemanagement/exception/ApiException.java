@@ -1,6 +1,6 @@
-package fadhilradh.springadvanced.exception;
+package fadhilakhmad.employeemanagement.exception;
 
-import fadhilradh.springadvanced.config.AppConfig;
+import fadhilakhmad.employeemanagement.config.AppConfig;
 import org.springframework.http.HttpStatus;
 
 import java.time.ZonedDateTime;
