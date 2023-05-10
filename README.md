@@ -1,14 +1,14 @@
-﻿# Sumatra
+﻿# Employee Management
 
-Spring Boot - Maven project boilerplate Structured with N-Tier Architecture 
+Simple API Server for Managing Employee 
+
+Live Swagger : https://employee-management.up.railway.app/swagger-ui/index.html 
 
 Features : 
 
 - [x] JPA
-- [x] PostgreSQL Docker compose & config (yml)
+- [x] PostgreSQL remote database (ElephantSQL)
 - [x] Lombok
 - [x] Spring Actuator
-- [x] Spring OpenFeign
 - [x] Testing
-- [X] H2 Database for staging environment
 
