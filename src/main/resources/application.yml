@@ -17,9 +17,9 @@ server:
 
 spring:
     datasource:
-        url: jdbc:postgresql://localhost:5332/employee_management
-        username: skygazer
-        password: hamdalah
+        url: jdbc:postgresql://babar.db.elephantsql.com:5432/asfjtcdi
+        username: asfjtcdi
+        password: m5WzMP3nfg8Gi_4pxoAyFjgNCm8F2Vo5
     jpa:
         hibernate:
             ddl-auto: update
